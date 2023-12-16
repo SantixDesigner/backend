@@ -1,0 +1,47 @@
+{{#if arrayIntegro}}
+{{#each array}}
+<div class="tarjetaProducto">
+    <h2 data-title="{{this.title}}" id="b-{{this.id}}">{{this.title}}</h2>
+    <h2 data-price="{{this.price}}" id="c-{{this.id}}">{{this.price}}</h2>
+    <h2 data-thumbnail="{{this.thumbnail}}" id="d-{{this.id}}">{{this.thumbnail}}</h2>
+    <button id="e-{{this.id}}">Comprar</button>
+    {{#if ../admin}}
+    <button id="{{this.id}}">Modificar</button>
+    <button id="a-{{this.id}}">Eliminar</button>
+</div>
+{{else}}
+</div>
+{{/if}}
+{{/each}}
+{{/if}}
+{{#if admin}}
+<form action="/" method="post">
+    <div>
+        <label for="titulo">Titulo</label>
+        <input type="text" name="titulo" id="titulo">
+    </div>
+    <div>
+        <label for="precio">Precio</label>
+        <input type="text" name="precio" id="precio">
+    </div>
+    <div>
+        <label for="imagen">Imagen</label>
+        <input type="text" id="imagen" name="imagen" id="imagen">
+    </div>
+    <button id="enviarLog">Enviar al array</button>
+</form>
+{{/if}}
+
+<div id="ingresarChat">
+    <h2>Ingrese un chat nuevo</h2>
+
+    <div>
+        <label for="">Tu usuario</label>
+    </div>
+    <div>
+        <input type="text" name="usuario" id="user">
+        <button id="crearNuevoChat">Enviar</button>
+    </div>
+</div>
+<div id="chat"></div>
+<script src="../../js/index.js"></script>

@@ -1,0 +1,20 @@
+{{#if item}}
+<form id="formPut">
+    <div>
+        <label for="">Titulo</label>
+        <input type="text" name="title" value="{{item.title}}" id="title">
+    </div>
+    <div>
+        <label for="">Precio</label>
+        <input type="text" name="price" value="{{item.price}}" id="price">
+    </div>
+    <div>
+        <label for="">Thumbnail</label>
+        <input type="text" name="thumbnail" value="{{item.thumbnail}}" id="thumbnail">
+    </div>
+
+    <input type="submit" id="actualizarProducto">Enviar</input>
+</form>
+
+<script src="../../js/itemPut.js"></script>
+{{/if}}
